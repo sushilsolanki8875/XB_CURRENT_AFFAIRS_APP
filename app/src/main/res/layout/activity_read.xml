@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlytMainContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rlytNewsContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlytNewsHeaderIconContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="3dp"
+        android:background="@color/app_tranparent_black"
+        >
+
+        <TextView
+            android:id="@+id/headerNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_white"
+            android:typeface="serif"
+            android:text="News"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBaseline="@+id/txtDateRead"
+            android:textSize="@dimen/txt_app_labels_fontsize"/>
+        <!--<ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:padding="7dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickMenu" />-->
+
+        <!-- 		        <TextView -->
+        <!--                 android:id="@+id/txtCatHeading" -->
+        <!--                 android:layout_width="match_parent" -->
+        <!--                 android:layout_height="wrap_content" -->
+        <!--                 android:layout_centerInParent="true" -->
+        <!--                 android:gravity="center" -->
+        <!--                 android:textColor="@color/app_white" -->
+        <!--                 android:textSize="@dimen/font_lbl_small_medium1" -->
+        <!--                 android:textStyle="bold" /> -->
+
+        <!--<ImageView
+            android:id="@+id/imgGoToTop"
+            android:layout_width ="40dp"
+            android:layout_height ="40dp"
+            android:clickable="true"
+            android:padding="9dp"
+
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/imgHomeSettings"
+            android:src="@mipmap/ic_launcher"
+            android:onClick="onClickRefresh"/>-->
+
+        <TextView
+            android:id="@+id/txtDateRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/imgDate"
+            android:textColor="@color/app_white"
+            android:typeface="serif"
+            android:text="date"
+            android:textSize="@dimen/txt_app_labels_fontsize"
+            android:layout_marginRight="2dp"/>
+
+        <ImageView
+             android:id="@+id/imgDate"
+             android:layout_width ="40dp"
+             android:layout_height ="40dp"
+             android:padding="3dp"
+            android:layout_centerInParent="true"
+             android:clickable="true"
+             android:layout_alignParentRight="true"
+             android:src="@mipmap/calender"
+             android:onClick="onClickDate"/>
+
+    </RelativeLayout>
+    <!--android:background="@drawable/selector_settings_options"
+    android:background="@drawable/selector_settings_options"
+    android:background="@drawable/selector_settings_options"-->
+    <!--  <in.xercesblue.arcmenu.ArcMenu
+        android:id="@+id/arcMenu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        custom:childSize="@dimen/menuChildSize"
+        custom:fromDegrees="@dimen/menuFromDegrees"
+        custom:toDegrees="@dimen/menuToDegrees" >
+    </in.xercesblue.arcmenu.ArcMenu> -->
+
+</RelativeLayout>
+
+
+
+    <!--     The navigation drawer -->
+    <!--    <RelativeLayout -->
+    <!--         android:layout_width="match_parent" -->
+    <!--         android:layout_height="match_parent" -->
+    <!--         android:id="@+id/rlytDrawerPane" -->
+    <!--         android:background="@color/app_white" -->
+    <!--         android:layout_marginLeft="-65dp" -->
+    <!--         android:layout_gravity="left">  -->
+
+    <!--        Settings bar -->
+    <!--        <RelativeLayout   -->
+    <!--             android:id="@+id/rlytSettings" -->
+    <!--             android:layout_width ="match_parent" -->
+    <!--         	android:layout_height ="wrap_content" -->
+    <!--         	android:layout_alignParentTop="true" -->
+    <!--         	android:padding="7dp"> -->
+
+    <!--            <ImageView  -->
+    <!--             android:layout_height="30dp" -->
+    <!--             android:layout_width="30dp" -->
+    <!--             android:src="@drawable/back" -->
+    <!--     		android:layout_alignParentLeft="true" -->
+    <!--             android:layout_alignParentTop="true" -->
+    <!--             android:clickable="true" -->
+    <!--             android:onClick="onClickMenu"/> -->
+
+    <!--             <TextView  -->
+    <!--             android:layout_height="wrap_content" -->
+    <!--             android:layout_width="wrap_content" -->
+    <!--             android:text="NewzByte" -->
+    <!--             android:textSize="@dimen/font_lbl_normal" -->
+    <!--     		android:textStyle="bold"   	 -->
+    <!--             android:layout_centerInParent="true" -->
+    <!--             android:textColor="@color/app_black_dark"/> -->
+
+    <!--             <ImageView  -->
+    <!--                 android:layout_width ="30dp" -->
+    <!--         		android:layout_height ="30dp" -->
+    <!--         		android:clickable="true" -->
+    <!--         		android:layout_alignParentRight="true" -->
+    <!--         		android:src="@drawable/setting" -->
+    <!--         		android:onClick="onClickSettings"/> -->
+    <!--         </RelativeLayout> -->
+    <!--         <RelativeLayout -->
+    <!-- 	    android:id="@+id/rlyt_detailHeader" -->
+    <!--         android:layout_width="match_parent" -->
+    <!--         android:layout_height="wrap_content" -->
+    <!--         android:background="@color/app_cat_color_5" -->
+    <!--         android:paddingTop="12dp" -->
+    <!--         android:paddingBottom="12dp" -->
+    <!--         android:layout_alignParentTop="true" -->
+    <!--         > -->
+
+    <!-- 		<TextView -->
+    <!--         android:id="@+id/txtCatHeading" -->
+    <!--         android:layout_width="wrap_content" -->
+    <!--         android:layout_height="wrap_content" -->
+    <!--         android:textColor="@color/app_white" -->
+    <!--         android:textSize="@dimen/font_lbl_normal"   -->
+    <!--         android:layout_centerInParent="true" -->
+
+    <!--         android:text="CATEGORIES" -->
+    <!--         android:textStyle="bold" /> -->
+
+    <!--     </RelativeLayout> -->
+    <!--    <LinearLayout -->
+    <!--         android:id="@+id/llyt_hrline" -->
+    <!-- 	    android:orientation="horizontal" -->
+    <!--         android:layout_width="match_parent" -->
+    <!--         android:layout_below="@+id/rlytSettings" -->
+    <!--         android:background="@color/app_lightgray" -->
+    <!--         android:layout_height="1dp" > -->
+    <!--    </LinearLayout> -->
+    <!--    -->
+    <!--     <LinearLayout   -->
+    <!--         android:id="@+id/llytCategoryHeader" -->
+    <!--         android:layout_width="match_parent" -->
+    <!--     	android:layout_height="50dp" -->
+    <!--     	android:layout_marginBottom="20dp" -->
+    <!--     	android:gravity="center_vertical" -->
+    <!--     	android:layout_below="@+id/llyt_hrline" -->
+    <!--     	android:background="@color/app_verylightgray_trans" > -->
+    <!--     	 <TextView -->
+    <!--         android:id="@+id/txtCatChooser1" -->
+    <!--         android:layout_width="match_parent" -->
+    <!--         android:layout_height="wrap_content" -->
+    <!--         android:text="Your Top Interests" -->
+    <!--         android:padding="10dp" -->
+    <!--         android:gravity="center" -->
+    <!--         android:textColor="@color/app_lightgray" -->
+    <!--         android:textSize="@dimen/font_lbl_normal" -->
+    <!--         />  -->
+    <!--     </LinearLayout> -->
+
+    <!-- <LinearLayout  -->
+    <!--     android:layout_width="match_parent" -->
+    <!--     android:layout_height="match_parent" -->
+    <!--     android:orientation="vertical" -->
+    <!--     android:layout_below="@+id/rlytSettings"> -->
+    <!-- <LinearLayout  -->
+    <!--     android:id="@+id/llytDrwawerUpperHalf" -->
+    <!--     android:layout_width="match_parent" -->
+    <!--     android:layout_height="0dp" -->
+    <!--     android:layout_weight="1" -->
+    <!--     android:orientation="horizontal"> -->
+    <!-- </LinearLayout>  -->
+    <!-- <LinearLayout  -->
+    <!--     android:id="@+id/llytDrwawerLowerHalf" -->
+    <!--     android:layout_width="match_parent" -->
+    <!--     android:layout_height="0dp" -->
+    <!--     android:layout_weight="1" -->
+    <!--     android:orientation="horizontal"> -->
+    <!-- </LinearLayout>    -->
+    <!-- </LinearLayout> -->
+    <!--         <ScrollView -->
+    <!--         android:id="@+id/scrollViewCat" -->
+    <!--         android:layout_width="match_parent" -->
+    <!--         android:layout_height="match_parent" -->
+    <!--        	android:layout_below="@+id/rlytSettings" -->
+    <!--         android:layout_marginTop="0dp" > -->
+    <!--        <LinearLayout -->
+    <!--             android:id="@+id/llytCatContainer" -->
+    <!--             android:layout_width="match_parent" -->
+    <!--             android:layout_height="wrap_content" -->
+    <!--             android:orientation="vertical" -->
+    <!--             android:gravity="center" > -->
+
+    <!--             <ImageView  -->
+    <!--      	android:id="@+id/btnCatAll" -->
+    <!--         android:layout_width="wrap_content" -->
+    <!--     	android:layout_height="wrap_content" -->
+    <!--     	android:padding="10dp" -->
+    <!--     	android:background="@drawable/viewall_selected"  -->
+    <!--     	android:clickable="true" -->
+    <!--     	android:scaleType="fitXY"  -->
+    <!--     	android:layout_marginTop="10dp" -->
+    <!--     	android:layout_marginBottom="10dp" -->
+    <!--     	android:onClick="onClickAllCategory" /> -->
+
+    <!--             </LinearLayout> -->
+
+    <!--      	</ScrollView>    -->
+
+    <!--     </RelativeLayout> -->
+
+    <!-- </in.newzbyte.app.Custom_DrawerLayout> -->

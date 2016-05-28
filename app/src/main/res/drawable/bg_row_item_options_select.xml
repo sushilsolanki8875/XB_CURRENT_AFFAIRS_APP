@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <gradient
+            android:angle="90"
+			android:startColor="@color/app_darkblue"
+			android:centerColor="@color/app_blue"	 
+            android:endColor="@color/app_lightblue"
+            android:type="linear" />
+    </shape>
+</item>
+</selector>
+
+<!-- android:startColor="#145d01" -->
+<!--             android:centerColor="#45AA2C"	  -->
+<!--             android:endColor="#73f362" -->
+            
+<!--             android:startColor="#21A502" -->
+<!--             android:centerColor="#44DD27"	 -->
+<!--             android:endColor="#B6F4AA" -->
+<!-- 			android:startColor="#56d236" -->
+<!--             android:centerColor="#73fa50"	 -->
+<!--             android:endColor="#D5ffcf" -->

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.examkabila.currentaffairs.app.Activity_Home">
+
+    <include layout="@layout/app_header_back" />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="9.0">
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/llytMainBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="2dp"
+             android:orientation="horizontal">
+
+           <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_viewRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="naviRead"
+                android:foreground="@drawable/card_foreground"
+                >-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/selecter_home_category"
+                    android:onClick="naviRead"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:layout_marginRight="2dp"
+                    android:textSize="@dimen/txt_app_labels_fontsize"
+
+                    android:padding="2dp">
+                <ImageView
+                    android:id="@+id/imgRead"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/my_newspaper"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:textSize="@dimen/txt_app_labels_fontsize"
+                    android:textColor="@drawable/selector_black_to_white_txt"
+                    android:text="@string/read"/>
+
+                </LinearLayout>
+              <!--  </android.support.v7.widget.CardView>-->
+
+            <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_viewTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="naviQuiz"
+                android:foreground="@drawable/card_foreground"
+                >-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/selecter_home_category"
+                    android:onClick="naviQuiz"
+                    android:layout_marginLeft="2dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="2dp">
+                <ImageView
+                    android:id="@+id/imgQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/quiz"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:textSize="@dimen/txt_app_labels_fontsize"
+                    android:textColor="@drawable/selector_black_to_white_txt"
+                    android:text="@string/test"/>
+                </LinearLayout>
+            <!--</android.support.v7.widget.CardView>-->
+         </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="horizontal">
+
+                <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:id="@+id/card_viewRead"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:clickable="true"
+                     android:onClick="naviRead"
+                     android:foreground="@drawable/card_foreground"
+                     >-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/selecter_home_category"
+                    android:onClick="naviVideo"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:layout_marginRight="2dp"
+                    android:textSize="@dimen/txt_app_labels_fontsize"
+
+                    android:padding="2dp">
+                    <ImageView
+                        android:id="@+id/imgVideos"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_video"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:typeface="monospace"
+                        android:textSize="@dimen/txt_app_labels_fontsize"
+                        android:textColor="@drawable/selector_black_to_white_txt"
+                        android:text="@string/video"/>
+
+                </LinearLayout>
+                <!--  </android.support.v7.widget.CardView>-->
+
+                <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_viewTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="naviQuiz"
+                    android:foreground="@drawable/card_foreground"
+                    >-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/selecter_home_category"
+                    android:onClick="naviMore"
+                    android:layout_marginLeft="2dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="2dp">
+                    <ImageView
+                        android:id="@+id/imgMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/default_image"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:typeface="monospace"
+                        android:textSize="@dimen/txt_app_labels_fontsize"
+                        android:textColor="@drawable/selector_black_to_white_txt"
+                        android:text="@string/more"/>
+                </LinearLayout>
+                <!--</android.support.v7.widget.CardView>-->
+            </LinearLayout>
+
+
+           <!-- <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_viewVideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:onClick="naviVideo"
+                android:layout_weight="1"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:foreground="@drawable/card_foreground"
+               >-->
+               <!-- <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/selecter_home_category"
+                    android:onClick="naviVideo"
+                    android:layout_margin="2dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="2dp">
+            <ImageView
+                android:id="@+id/imgVideos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_video"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:textSize="@dimen/txt_app_labels_fontsize"
+                    android:textColor="@drawable/selector_black_to_white_txt"
+                    android:text="@string/video"/>
+                </LinearLayout>-->
+            <!--</android.support.v7.widget.CardView>-->
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/llytOptionsContainer"
+        android:orientation="horizontal"
+        android:onClick="toggleOptionsVisibility"
+        android:visibility="gone"
+        android:baselineAligned="false"
+        android:background="@color/app_tranparent_black"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/app_transparent">
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewOptions"
+            android:dividerHeight="0dp"
+            android:background="@color/app_tranparent_black"
+            android:visibility="gone"
+            >
+
+        </ListView>
+
+    </LinearLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:clickable="true"
+          android:onClick="naviDownload"
+          android:layout_alignParentBottom="true">
+      
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:scaleType="centerCrop"
+          android:src="@mipmap/default_image"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:textSize="@dimen/txt_app_labels_fontsize"
+              android:textColor="@color/colorPrimary"
+              android:text="Download GK pdf our Website\n Click here"/>
+
+      </RelativeLayout>
+  </RelativeLayout>
+    <!-- <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Settings"
+         android:onClick="naviSettings"
+         android:id="@+id/button" />-->
+
+</LinearLayout>

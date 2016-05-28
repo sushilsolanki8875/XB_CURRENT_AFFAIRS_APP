@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/llytHomeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardBackgroundColor="@color/app_black">-->
+
+    <RelativeLayout
+        android:id="@+id/rlytImgContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_black"
+        android:padding="0dp" >
+
+        <LinearLayout
+            android:id="@+id/rlytLoadingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="0dp" >
+
+            <!--<ImageView
+                android:id="@+id/imgHomeLoading"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="120dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher" />-->
+
+            <ImageView
+                android:id="@+id/imgHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                 android:background="@color/app_transparent"
+                android:layout_weight="1"
+                android:src="@mipmap/xb"
+                android:scaleType="centerCrop" />
+
+            <!--<android.support.design.widget.FloatingActionButton
+                android:id="@+id/myFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_action_overflow"
+                app:fabSize="normal"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                 />-->
+        <!--<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgHome"
+            android:paddingBottom="10dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">-->
+            <TextView
+                android:id="@+id/txtHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/app_white"
+                android:layout_below="@id/imgHome"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                android:textSize="@dimen/txt_app_labels_fontsize_read"
+                android:typeface="serif" />
+
+
+
+
+
+           <!-- </LinearLayout>
+        </ScrollView>-->
+        </LinearLayout>
+
+
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/txtNewsTime" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:textColor="@color/app_lightgray" -->
+        <!-- android:textSize="@dimen/font_lbl_very_small" /> -->
+        <!-- </LinearLayout> -->
+
+
+       
+        <!-- </LinearLayout> -->
+
+<!--<RelativeLayout
+    android:id="@+id/rlytnewsfootergradientcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_alignParentBottom="true">
+            
+        <RelativeLayout
+            android:id="@+id/rlytnewsfooter"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/txtAuthorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/app_white"
+                    android:textSize="@dimen/txt_app_labels_fontsize" />
+
+                <TextView
+                    android:id="@+id/txtAuthorDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/txtAuthorText"
+                    android:text="Harsh / Today"
+                    android:textStyle="bold"
+                    android:textColor="@color/app_black"
+                    android:typeface="serif"
+                    android:textSize="@dimen/txt_app_notes_fontsize"/>
+
+                <LinearLayout
+                    android:id="@+id/llytFooterLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtAuthorText"
+                    android:background="@color/app_black"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+&lt;!&ndash;                 <TextView &ndash;&gt;
+&lt;!&ndash;                     android:id="@+id/txtMoreAt" &ndash;&gt;
+&lt;!&ndash;                     android:layout_width="wrap_content" &ndash;&gt;
+&lt;!&ndash;                     android:layout_height="wrap_content" &ndash;&gt;
+&lt;!&ndash;                     android:layout_alignParentLeft="true" &ndash;&gt;
+&lt;!&ndash;                     android:layout_below="@+id/llytFooterLine" &ndash;&gt;
+&lt;!&ndash;                     android:layout_marginLeft="10dp" &ndash;&gt;
+&lt;!&ndash;                     android:text="more at" &ndash;&gt;
+&lt;!&ndash;                     android:textColor="@color/app_offwhite" &ndash;&gt;
+&lt;!&ndash;                     android:textSize="@dimen/font_lbl_normal" /> &ndash;&gt;
+
+
+            </RelativeLayout>-->
+
+            
+
+
+           <!-- <ImageView
+            android:id="@+id/imgShareMain"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:onClick="onClickShareMain"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />-->
+
+      <!--  </RelativeLayout>
+     </RelativeLayout>-->
+<!--         <in.xercesblue.arcmenu.ArcMenu -->
+<!--                 android:id="@+id/arcMenu1" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:layout_alignParentRight="true" -->
+<!--                 android:layout_alignParentBottom="true" -->
+<!--                 android:layout_marginRight="5dp" -->
+<!--                 android:layout_marginBottom="10dp" -->
+<!--                 custom:childSize="@dimen/menuChildSize" -->
+<!--                 custom:fromDegrees="@dimen/menuFromDegrees" -->
+<!--                 custom:toDegrees="@dimen/menuToDegrees" > -->
+<!--             </in.xercesblue.arcmenu.ArcMenu> -->
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlytImgCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.0"
+        android:background="@color/app_black" >
+    </RelativeLayout>
+<!--</android.support.v7.widget.CardView>-->
+</RelativeLayout>

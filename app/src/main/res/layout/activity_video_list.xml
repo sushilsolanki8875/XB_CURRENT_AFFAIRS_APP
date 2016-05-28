@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_lightgray"
+
+    tools:context="com.examkabila.currentaffairs.app.Activity_Video_List">
+
+    <include layout="@layout/app_header_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.0"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearCard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:background="@drawable/selecter_home_category"
+            android:visibility="visible">
+
+            <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_viewTest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+               >-->
+            <LinearLayout
+                android:id="@+id/linearcardVideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:onClick="naviVideoPlayer">
+                    <!-- <com.google.android.youtube.player.YouTubePlayerView
+                         android:id="@+id/youtube_view"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="30dp" />-->
+                    <ImageView
+                        android:id="@+id/imgBtnCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="4dp"
+                        android:padding="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/default_image" />
+
+                    <LinearLayout
+                        android:id="@+id/llytTextContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/tranparrent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtCatName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_text_transgradient_light_to_dark"
+                            android:gravity="center|bottom"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text=""
+                            android:textColor="@color/app_offwhite"
+                            android:textSize="@dimen/txt_app_labels_large_fontsize"
+                            android:textStyle="bold"
+                            android:typeface="monospace" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearTranspar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+
+                        android:background="@drawable/tranparrent"
+                        android:orientation="vertical"></LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!-- </android.support.v7.widget.CardView>-->
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listVideo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="5.0">
+
+
+        </ListView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="naviYouTube"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_image"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/txt_app_labels_fontsize"
+                android:textColor="@color/colorPrimary"
+                android:text="Subscribe channal ExamKabila\n Click here"/>
+
+        </RelativeLayout>
+
+        <!-- <include layout="@layout/app_footer"/>-->
+    </LinearLayout>
+</LinearLayout>

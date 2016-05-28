@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llytHeader"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.9"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_weight="9.5">
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:textSize="@dimen/txt_app_header_fontsize"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/app_white"
+        android:text="Header" />
+
+    <LinearLayout
+        android:id="@+id/linearDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_white"
+            android:textSize="@dimen/txt_app_labels_fontsize"
+            android:layout_marginRight="5dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginRight="5dp"
+
+            android:src="@mipmap/calender"/>
+
+    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_action_overflow"
+            android:clickable="true"
+            android:visibility="gone"
+            android:background="@drawable/selector_header_image"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+	<!--<LinearLayout
+	    android:layout_width="match_parent"
+	     android:layout_height="0dp"
+        android:layout_weight="0.5"
+	    android:background="@color/app_darkblue"
+	    >
+	    
+	</LinearLayout>-->
+</LinearLayout>

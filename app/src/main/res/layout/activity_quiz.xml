@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <!-- Header aligned to top -->
+    <include layout="@layout/app_header_back" />
+
+    <!-- Content below header and above footer -->
+
+    <LinearLayout
+        android:id="@+id/llytMainBody"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.0"
+
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrolViewQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5"
+            android:background="@color/app_white"
+            android:fadeScrollbars="false" >
+
+            <LinearLayout
+                android:id="@+id/llytQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp" >
+
+                <TextView
+                    android:id="@+id/txtQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_black"
+                    android:text="" />
+
+                <ImageView
+                    android:id="@+id/imgViewQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="Image" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/app_lightgray" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.5"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/listOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:fadeScrollbars="false" >
+            </ListView>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrolViewSolution"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5"
+            android:background="@color/app_lightgray"
+            android:visibility="gone"
+            android:fadeScrollbars="false" >
+
+            <LinearLayout
+                android:id="@+id/llytSolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/txtSolution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_white"
+                    android:scrollHorizontally="true"
+                    android:singleLine="false"
+                    android:text="" />
+
+                <ImageView
+                    android:id="@+id/imgViewSolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="Image" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/app_lightgray" >
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlytNextPrev"
+            android:layout_width="match_parent"
+            android:background="@color/app_tranparent_black"
+            android:layout_height="0dp"
+            android:layout_weight="1.4" >
+
+            <ImageButton
+                android:id="@+id/imgBtnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:layout_toLeftOf="@+id/imgBtnStop"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPrev"
+                android:scaleType="centerCrop"
+                android:src="@drawable/selector_question_prev" />
+
+            <ImageButton
+                android:id="@+id/imgBtnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/imgBtnStop"
+                android:background="@android:color/transparent"
+                android:onClick="onClickNext"
+                android:scaleType="centerCrop"
+                android:src="@drawable/selector_question_next" />
+
+            <LinearLayout
+                android:id="@+id/llytFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/imgBtnShowAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickShowAns"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/selector_question_get_ans" />
+
+                <TextView
+                    android:id="@+id/txtShowAns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get Ans"
+                    android:textColor="@color/app_white"
+                    android:textSize="@dimen/txt_app_notes_fontsize" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imgBtnStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:onClick="onClickStop"
+                android:scaleType="centerCrop"
+                android:src="@drawable/selector_question_stop" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/app_darkoffwhite" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llytAdd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical" >
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banneradds">
+            </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Footer aligned to bottom -->
+<!--<include layout="@layout/app_footer" />-->
+   <!-- <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/app_darkoffwhite" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llytAdd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+</LinearLayout>

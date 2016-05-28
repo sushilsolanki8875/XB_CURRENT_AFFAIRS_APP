@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    tools:context="com.iseva.app.source.Activity_Profile_Merchant">
+
+    <include layout="@layout/app_header_back"></include>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.0"
+        android:layout_margin="5dp"
+        card_view:cardBackgroundColor="@color/app_white">
+
+        <ScrollView
+            android:id="@+id/scrollViewBasicInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtSetttigs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="GENRAL SETTINGS"
+                        android:textSize="@dimen/txt_app_labels_fontsize"
+                        android:typeface="serif"
+                        android:textColor="@android:color/black" />
+
+                    <!--<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="7dp"
+                        android:background="@color/app_gray"></LinearLayout>-->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selecter_settings"
+                        android:clickable="true"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:id="@+id/txtNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Notification"
+                            android:textSize="@dimen/txt_app_labels_fontsize"
+                            android:typeface="serif"
+                            android:textColor="@drawable/selector_black_to_white_txt" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"></LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/checkBoxNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:checked="true" />
+
+                        <!--<Switch
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/switch1"
+                            android:layout_marginRight="10dp"/>-->
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/Disclaimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selecter_settings"
+                        android:clickable="true"
+                        android:onClick="changeLan"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="7dp"
+
+                        android:paddingRight="7dp"
+                        android:paddingTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/txtDisclaimer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Change Language"
+                            android:textSize="@dimen/txt_app_labels_fontsize"
+                            android:typeface="serif"
+                            android:textColor="@drawable/selector_black_to_white_txt"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selecter_settings"
+                        android:clickable="true"
+                        android:paddingBottom="10dp"
+
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingTop="10dp">
+
+
+                        <TextView
+                            android:id="@+id/txtAbout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="About Us"
+                            android:textSize="@dimen/txt_app_labels_fontsize"
+                            android:typeface="serif"
+                            android:textColor="@drawable/selector_black_to_white_txt" />
+
+                    </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/linearShare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:background="@drawable/selecter_settings"
+                        android:clickable="true"
+                        android:paddingBottom="10dp"
+
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Share App"
+                            android:typeface="serif"
+                            android:textSize="@dimen/txt_app_labels_fontsize"
+                            android:textColor="@drawable/selector_black_to_white_txt" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selecter_settings"
+                        android:clickable="true"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txtRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Rate Us"
+                            android:typeface="serif"
+                            android:textSize="@dimen/txt_app_labels_fontsize"
+                            android:textColor="@drawable/selector_black_to_white_txt" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+    <!--android:background="?android:attr/selectableItemBackground"-->
+

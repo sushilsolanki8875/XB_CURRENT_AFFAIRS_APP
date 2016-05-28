@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Activity_SelectLanguage" >
+
+     <!-- Header aligned to top -->
+
+    <include layout="@layout/app_header" />
+    
+    <!-- Scrollable Content below header and above footer -->
+	 <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.0"
+        >
+           <LinearLayout
+                android:id="@+id/llytMainBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+               
+                <LinearLayout 
+                     android:orientation="horizontal"
+                      android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    
+                    <TextView
+                    android:id="@+id/txtStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_black"
+                    android:textSize="@dimen/txt_app_labels_fontsize"
+                    android:gravity="left"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="4dp"
+                    android:text="*" />
+                    
+                    <TextView
+                    android:id="@+id/txtNoteLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_black"
+                    android:textSize="@dimen/txt_app_notes_fontsize"
+                    android:gravity="left"
+                    android:layout_gravity="center"
+                    android:text="@string/select_language_note" />
+                </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="10dp"
+                   android:layout_gravity="center_vertical|center_horizontal">
+
+                 <Button
+                     android:id="@+id/btnHindi"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/hilang"
+                     android:textColor="@drawable/selector_btn_text_app"
+                     android:background="@drawable/selector_btn_app"/>
+
+                   <Button
+                       android:id="@+id/btnEnglish"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/enlang"
+                       android:layout_marginTop="10dp"
+                       android:textColor="@drawable/selector_btn_text_app"
+                       android:background="@drawable/selector_btn_app"/>
+
+
+               </LinearLayout>
+                
+
+
+            </LinearLayout>
+
+    </ScrollView>
+
+     <!-- Footer aligned to bottom 
+     <include layout="@layout/footer" />-->
+
+    	
+   
+</LinearLayout>
